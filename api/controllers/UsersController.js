@@ -1,10 +1,10 @@
 const User = require('../models/User');
 class UserController {
-    login(req, res, next){
-        return res.render('login');
+    index(req, res, next){
+        return res.render('main');
     }
     registerView(req, res, next){
-        return res.render('register');
+        return res.render('mainRegister');
     }
     signIn(req, res, next) {
         User.findOne({username: req.body.username, password: req.body.password})

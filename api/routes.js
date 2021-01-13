@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const usersController = require('./controllers/UsersController');
 function routes(app){
-    router.get('/login',usersController.login);
+    router.get('/', usersController.index);
     router.post('/signIn', usersController.signIn);
     router.post('/register', usersController.register);
     router.get('/register', usersController.registerView);
